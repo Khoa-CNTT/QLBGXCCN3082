@@ -11,7 +11,7 @@
                             <div class="row g-3">
                                 <div class="col-12">
                                     <label for="inputName" class="form-label">Họ và Tên</label>
-                                    <input type="text" class="form-control" id="inputName">
+                                    <input type="text" class="form-control" >
                                 </div>
                                 <div class="col-12">
                                     <label for="inputEmail" class="form-label">Email</label>
@@ -62,7 +62,6 @@
                                         <thead class="table-dark text-nowrap">
                                             <tr>
                                                 <th>#</th>
-                                                <th>ID</th>
                                                 <th>Họ và Tên</th>
                                                 <th>Email</th>
                                                 <th>Mật Khẩu</th>
@@ -77,7 +76,6 @@
                                         <tbody>
                                             <tr>
                                                 <td>1</td>
-                                                <td>1001</td>
                                                 <td>Nguyễn Văn A</td>
                                                 <td>nguyenvana@gmail.com</td>
                                                 <td>******</td>
@@ -90,7 +88,6 @@
                                             </tr>
                                             <tr>
                                                 <td>1</td>
-                                                <td>1001</td>
                                                 <td>Nguyễn Văn A</td>
                                                 <td>nguyenvana@gmail.com</td>
                                                 <td>******</td>
@@ -103,7 +100,6 @@
                                             </tr>
                                             <tr>
                                                 <td>1</td>
-                                                <td>1001</td>
                                                 <td>Nguyễn Văn A</td>
                                                 <td>nguyenvana@gmail.com</td>
                                                 <td>******</td>

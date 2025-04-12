@@ -1,16 +1,18 @@
 <template>
     <div class="row">
-        <div class="col-lg-4 col-md-12">
+        <div class="col-lg-3 col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="mt-2">Thêm Mới Chức Năng</h5>
+                    <h5 class="mt-2">Thêm Mới Bãi Xe</h5>
                 </div>
                 <div class="card-body">
-                    <label class="mb-2">ID</label>
+                    <label class="mb-2">Tên Bãi</label>
                     <input type="text" class="form-control mb-2" />
-                    <label class="mb-2">Tên Chức Năng</label>
+                    <label class="mb-2">Sức chứa ô tô</label>
                     <input type="text" class="form-control mb-2" />
-                    <label class="mb-2">Tình Trạng</label>
+                    <label class="mb-2">Sức chứa khác</label>
+                    <input type="text" class="form-control mb-2" />
+                    <label class="mb-2">Trạng Thái</label>
                     <select class="form-control mb-2">
                         <option value="1">Hoạt Động</option>
                         <option value="0">Tạm Ngưng</option>
@@ -23,10 +25,10 @@
                 </div>
             </div>
         </div>
-        <div class="col-lg-8 col-md-12">
+        <div class="col-lg-9 col-md-12">
             <div class="card">
                 <div class="card-header">
-                    <h5 class="mt-2">Danh Sách Chức Năng</h5>
+                    <h5 class="mt-2">Danh Sách Bãi Giữ Xe</h5>
                 </div>
                 <div class="card-body">
                     <div class="table-responsive">
@@ -34,32 +36,37 @@
                             <thead>
                                 <tr>
                                     <th class="text-center">#</th>
-                                    <th class="text-center">ID</th>
-                                    <th class="text-center">Tên Chức Năng</th>
-                                    <th class="text-center">Tình Trạng</th>
+                                    <th class="text-center">Tên Bãi</th>
+                                    <th class="text-center">Sức Chứa Ô Tô</th>
+                                    <th class="text-center">Sức Chứa Khác</th>
+                                    <th class="text-center">Trạng Thái</th>
                                     <th class="text-center">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                    <tr class="text-nowrap">
-                                        <th class="align-middle"></th>
-                                        <td class="align-middle text-center">
-                                            <img alt="" class="img-fluid" style="width: 80px;">
-                                        </td>
-                                        <td class="text-center align-middle">
-                                            
-                                        </td>
-                                        <td class="align-middle">
-                                            <button class="btn btn-success w-100">Hoạt Động</button>
-                                        </td>
-                                        <td class="align-middle text-center">
-                                            <button class="btn btn-primary me-2" data-bs-toggle="modal"
-                                                data-bs-target="#updateModal">Cập
-                                                Nhật</button>
-                                            <button class="btn btn-danger" data-bs-toggle="modal"
-                                                data-bs-target="#deleteModal">Xóa</button>
-                                        </td>
-                                    </tr>
+                                <tr class="text-nowrap">
+                                    <th class="align-middle"></th>
+                                    <td class="align-middle text-center">
+                                        <img alt="" class="img-fluid" style="width: 80px;">
+                                    </td>
+                                    <td class="text-center align-middle">
+
+                                    </td>
+                                    <td class="text-center align-middle">
+
+                                    </td>
+
+                                    <td class="align-middle">
+                                        <button class="btn btn-success w-100">Hoạt Động</button>
+                                    </td>
+                                    <td class="align-middle text-center">
+                                        <button class="btn btn-primary me-2" data-bs-toggle="modal"
+                                            data-bs-target="#updateModal">Cập
+                                            Nhật</button>
+                                        <button class="btn btn-danger" data-bs-toggle="modal"
+                                            data-bs-target="#deleteModal">Xóa</button>
+                                    </td>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
@@ -77,16 +84,16 @@
                 </div>
                 <div class="modal-body">
                     <div class="card-body">
-                    <label class="mb-2">ID</label>
-                    <input type="text" class="form-control mb-2" />
-                    <label class="mb-2">Tên Chức Năng</label>
-                    <input type="text" class="form-control mb-2" />
-                    <label class="mb-2">Tình Trạng</label>
-                    <select class="form-control mb-2">
-                        <option value="1">Hoạt Động</option>
-                        <option value="0">Tạm Ngưng</option>
-                    </select>
-                </div>
+                        <label class="mb-2">ID</label>
+                        <input type="text" class="form-control mb-2" />
+                        <label class="mb-2">Tên Chức Năng</label>
+                        <input type="text" class="form-control mb-2" />
+                        <label class="mb-2">Tình Trạng</label>
+                        <select class="form-control mb-2">
+                            <option value="1">Hoạt Động</option>
+                            <option value="0">Tạm Ngưng</option>
+                        </select>
+                    </div>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Đóng</button>
@@ -126,12 +133,11 @@
             </div>
         </div>
     </div>
-    
 </template>
 <script>
 
 export default {
-   
-};
+
+}
 </script>
 <style></style>

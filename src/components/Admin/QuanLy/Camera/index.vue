@@ -8,9 +8,7 @@
                 <div class="card-body">
                     <label class="form-label">Tên Cam</label>
                     <input type="text" class="form-control">
-                    <label class="form-label">Vị Trí Đặt Cam</label>
-                    <input type="text" class="form-control">
-                    <label class="form-lable">Tình Trạng</label>
+                    <label class="form-lable mt-2">Tình Trạng</label>
                     <select class="form-control">
                         <option value="0">Tạm Dừng</option>
                         <option value="1">Hoạt Động</option>
@@ -36,7 +34,6 @@
                                 <tr>
                                     <th class="text-center">#</th>
                                     <th class="text-center">Tên Cam</th>
-                                    <th class="text-center">Vị Trí Đặt Cam</th>
                                     <th class="text-center">Tình Trạng</th>
                                     <th class="text-center">Action</th>
                                 </tr>
@@ -46,7 +43,6 @@
                                 <tr>
                                     <th class="align-middle text-center">1</th>
                                     <td class="align-middle text-center">cam01</td>
-                                    <td class="align-middle text-center">cổng</td>
                                     <td class="align-middle text-center">
                                         <button class="btn btn-success w-60">Hoạt Động</button>
                                         <button class="btn btn-warning w-60">Tạm Dừng</button>

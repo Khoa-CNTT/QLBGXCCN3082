@@ -17,11 +17,10 @@
                     <thead>
                         <tr class="text-center">
                             <th>#</th>
-                            <th>Tên Cư DânDân</th>
+                            <th>Họ và TênTên</th>
                             <th>Biển Số Xe</th>
                             <th>Loại Xe</th>
                             <th>Trạng Thái Phê Duyệt</th>
-                            <th>Action</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -35,15 +34,7 @@
                                 <button class="btn btn-success">Đã Kích Hoạt</button>
                                 <button class="btn btn-danger">Chưa Kích Hoạt</button>
                             </td>
-                            <td class="text-center">
-                                <button class="btn btn-primary me-1" data-bs-toggle="modal"
-                                    data-bs-target="#capNhatModal">Cập
-                                    Nhật</button>
-                                <button class="btn btn-danger" data-bs-toggle="modal"
-                                    data-bs-target="#xoaModal">Xóa</button>
-                            </td>
                         </tr>
-
                     </tbody>
                 </table>
             </div>

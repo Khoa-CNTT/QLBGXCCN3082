@@ -4,9 +4,7 @@
             <div class="card mt-2">
                 <div class="card-header d-flex justify-content-between align-items-center">
                     <h3>Lịch Sử Ra Vào</h3>
-                    <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                        Thêm Mới
-                    </button>
+                    
                 </div>
                 <div class="card-body table-responsive">
                     <table class="table table-bordered table-hover ">
@@ -26,8 +24,8 @@
                             </tr>
                             <tr>
                                 <th class="text-center">#</th>
-                                <th class="text-center">ID Xe Cư Dân</th>
-                                <th class="text-center">ID Camera quét</th>
+                                <th class="text-center">Tên Cư Dân</th>
+                                <th class="text-center">Biển Số Xe</th>
                                 <th class="text-center">Thời Gian</th>
                                 <th class="text-center">Xe vào hoặc ra</th>
                                 <th class="text-center">Action</th>
@@ -36,8 +34,8 @@
                         <tbody>
                             <tr>
                                 <th class="align-middle text-center">1</th>
-                                <td class="align-middle text-center">a21</td>
-                                <td class="align-middle text-center">c1</td>
+                                <td class="align-middle text-center">buidat</td>
+                                <td class="align-middle text-center">99999</td>
                                 <td class="align-middle text-center">00:00:00</td>
                                 <td class="align-middle text-center">
                                     <button class="btn btn-success me-2">xe vào </button>

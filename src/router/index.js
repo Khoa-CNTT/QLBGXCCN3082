@@ -9,6 +9,16 @@ const routes = [
         meta    :   {layout : 'default'}
     },
     {
+        path : '/admin/dang-nhap',
+        component: ()=>import('../components/Admin/DangNhap/index.vue'),
+        meta    :   {layout : 'client'}
+    },
+    {
+        path : '/admin/dang-ky',
+        component: ()=>import('../components/Admin/DangKy/index.vue'),
+        meta    :   {layout : 'client'}
+    },
+    {
         path : '/admin/xe',
         component: ()=>import('../components/Admin/QuanLy/Xe/index.vue'),
         meta    :   {layout : 'default'}
@@ -16,6 +26,36 @@ const routes = [
     {
         path : '/admin/camera',
         component: ()=>import('../components/Admin/QuanLy/Camera/index.vue'),
+        meta    :   {layout : 'default'}
+    },
+    {
+        path : '/admin/chi-tiet-bai-xe',
+        component: ()=>import('../components/Admin/QuanLy/ChiTietBaiXe/index.vue'),
+        meta    :   {layout : 'default'}
+    },
+    {
+        path : '/admin/bai-xe',
+        component: ()=>import('../components/Admin/QuanLy/BaiXe/index.vue'),
+        meta    :   {layout : 'default'}
+    },
+    {
+        path : '/admin/vi-tri-cam',
+        component: ()=>import('../components/Admin/QuanLy/ViTriDatCam/index.vue'),
+        meta    :   {layout : 'default'}
+    },
+    {
+        path : '/admin/loai-xe',
+        component: ()=>import('../components/Admin/QuanLy/LoaiXe/index.vue'),
+        meta    :   {layout : 'default'}
+    },
+    {
+        path : '/admin/giao-dich',
+        component: ()=>import('../components/Admin/QuanLy/GiaoDich/index.vue'),
+        meta    :   {layout : 'default'}
+    },
+    {
+        path : '/admin/thong-bao',
+        component: ()=>import('../components/Admin/QuanLy/ThongBao/index.vue'),
         meta    :   {layout : 'default'}
     },
     {
@@ -45,23 +85,23 @@ const routes = [
     },
     {
         path : '/admin/chuc-nang',
-        component: ()=>import('../components/Admin/QuanLy/ChucNang/ChucNang.vue'),
+        component: ()=>import('../components/Admin/QuanLy/ChucNang/index.vue'),
         meta    :   {layout : 'default'}
     },
 
     {
         path : '/admin/chuc-vu',
-        component: ()=>import('../components/Admin/QuanLy/ChucVu/chucvu.vue'),
+        component: ()=>import('../components/Admin/QuanLy/ChucVu/index.vue'),
         meta    :   {layout : 'default'}
     },
     {
         path : '/admin/quan-ly-tai-khoan',
-        component: ()=>import('../components/Admin/QuanLy/QuanLyAdmin/quanlyadmin.vue'),
+        component: ()=>import('../components/Admin/QuanLy/QuanLyAdmin/index.vue'),
         meta    :   {layout : 'default'}
     },
     {
         path : '/admin/chi-tiet-chuc-vu',
-        component: ()=>import('../components/Admin/QuanLy/ChiTietChucVu/chitietchucvu.vue'),
+        component: ()=>import('../components/Admin/QuanLy/ChiTietChucVu/index.vue'),
         meta    :   {layout : 'default'}
     },
     {
@@ -69,16 +109,44 @@ const routes = [
         component: ()=>import('../components/CuDan/TrangChu/index.vue'),
         meta    :   {layout : 'client'}
     },
-
-    {
-        path : '/cu-dan/vi',
-        component: ()=>import('../components/CuDan/Vi/index.vue'),
-        meta    :   {layout : 'client'}
-    },
-
     {
         path : '/cu-dan/giao-dich',
         component: ()=>import('../components/CuDan/GiaoDich/index.vue'),
+        meta    :   {layout : 'client'}
+    },
+    {
+        path : '/cu-dan/dang-ky',
+        component: ()=>import('../components/CuDan/DangKy/index.vue'),
+        meta    :   {layout : 'client'}
+    },
+    {
+        path : '/cu-dan/dang-nhap',
+        component: ()=>import('../components/CuDan/DangKy/index.vue'),
+        meta    :   {layout : 'client'}
+    },
+    {
+        path : '/cu-dan/quan-ly-xe',
+        component: ()=>import('../components/CuDan/Xe/index.vue'),
+        meta    :   {layout : 'client'}
+    },
+    {
+        path : '/cu-dan/dang-ky-xe',
+        component: ()=>import('../components/CuDan/DangKyXe/index.vue'),
+        meta    :   {layout : 'client'}
+    },
+    {
+        path : '/cu-dan/thong-bao',
+        component: ()=>import('../components/CuDan/ChiTietThongBao/index.vue'),
+        meta    :   {layout : 'client'}
+    },
+    {
+        path : '/cu-dan/bao-cao-su-co',
+        component: ()=>import('../components/CuDan/BaoCaoSuCo/index.vue'),
+        meta    :   {layout : 'client'}
+    },
+    {
+        path : '/cu-dan/profile',
+        component: ()=>import('../components/CuDan/QuanLyTaiKhoan/index.vue'),
         meta    :   {layout : 'client'}
     },
 ]

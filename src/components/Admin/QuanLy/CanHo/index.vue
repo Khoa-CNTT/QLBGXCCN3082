@@ -6,17 +6,23 @@
                     <h3>Căn Hộ</h3>
                 </div>
                 <div class="card-body">
-                    <label>Id</label>
-                    <input class="form-control mt-2" type="text">
                     <label class="mt-2">Tầng</label>
-                    <input class="form-control mt-2" type="text">
+                    <input class="form-control mt-2" type="text" />
+
                     <label class="mt-2">Số Căn Hộ</label>
-                    <input class="form-control mt-2" type="text">
+                    <input class="form-control mt-2" type="text" />
+
                     <label class="mt-2">Chủ Hộ</label>
-                    <input class="form-control mt-2" type="text">
+                    <input class="form-control mt-2" type="text" />
+
                     <label class="mt-2">Tình Trạng</label>
-                    <input class="form-control mt-2" type="text">
+                    <select class="form-select mt-2">
+                        <option value="">-- Chọn tình trạng --</option>
+                        <option value="ton_tai">Hoạt Động</option>
+                        <option value="khong_ton_tai">Không Hoạt Động</option>
+                    </select>
                 </div>
+
                 <div class="card-footer text-end mt-3">
                     <button class="btn btn-primary">Thêm Mới</button>
                 </div>
@@ -46,7 +52,6 @@
                                 </tr>
                                 <tr class=" text-center">
                                     <th class="align-middle text-center">#</th>
-                                    <th class="align-middle text-center">Id</th>
                                     <th class="align-middle text-center">Tầng</th>
                                     <th class="align-middle text-center">Số Căn Hộ</th>
                                     <th class="align-middle text-center">Chủ Hộ</th>
@@ -57,7 +62,6 @@
                             <tbody>
                                 <tr>
                                     <th class="align-middle text-center">1</th>
-                                    <th class="align-middle text-center">123</th>
                                     <th class="align-middle text-center">Tầng 2</th>
                                     <th class="align-middle text-center">201</th>
                                     <th class="align-middle text-center">Nguyễn Văn A</th>

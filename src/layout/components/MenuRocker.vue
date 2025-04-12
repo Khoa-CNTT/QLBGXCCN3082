@@ -24,11 +24,11 @@
                 </li>
 
                 <li class="nav-item">
-                    <router-link to="/cu-dan/vi">
-                        <a class="nav-link" href="/cu-dan/vi">
+                    <router-link to="/cu-dan/dang-ky-xe">
+                        <a class="nav-link" href="/cu-dan/dang-ky-xe">
                             <div class="parent-icon"><i class='bx bx-cookie'></i>
                             </div>
-                            <div class="menu-title">Ví</div>
+                            <div class="menu-title">Đăng Ký Xe</div>
                         </a>
                     </router-link>
                 </li>
@@ -44,36 +44,25 @@
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="widgets.html">
-                        <div class="parent-icon"><i class='bx bx-cookie'></i>
-                        </div>
-                        <div class="menu-title">Cư Dân</div>
-                    </a>
+                    <router-link to="/cu-dan/quan-ly-xe">
+                        <a class="nav-link" href="/cu-dan/quan-ly-xe">
+                            <div class="parent-icon"><i class='bx bx-cookie'></i>
+                            </div>
+                            <div class="menu-title">Xe</div>
+                        </a>
+                    </router-link>
                 </li>
 
                 <li class="nav-item">
-                    <a class="nav-link" href="widgets.html">
-                        <div class="parent-icon"><i class='bx bx-cookie'></i>
-                        </div>
-                        <div class="menu-title">Xe</div>
-                    </a>
+                    <router-link to="/cu-dan/bao-cao-su-co">
+                        <a class="nav-link" href="/cu-dan/bao-cao-su-co">
+                            <div class="parent-icon"><i class='bx bx-cookie'></i>
+                            </div>
+                            <div class="menu-title">Báo Cáo Sự Cố</div>
+                        </a>
+                    </router-link>
                 </li>
 
-                <li class="nav-item">
-                    <a class="nav-link" href="widgets.html">
-                        <div class="parent-icon"><i class='bx bx-cookie'></i>
-                        </div>
-                        <div class="menu-title">Lịch Sử Hoạt Động</div>
-                    </a>
-                </li>
-
-                <li class="nav-item">
-                    <a class="nav-link" href="widgets.html">
-                        <div class="parent-icon"><i class='bx bx-cookie'></i>
-                        </div>
-                        <div class="menu-title">Báo Cáo Sự Cố</div>
-                    </a>
-                </li>
             </ul>
         </nav>
     </div>

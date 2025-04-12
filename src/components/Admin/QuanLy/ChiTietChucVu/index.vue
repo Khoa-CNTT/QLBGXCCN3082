@@ -26,22 +26,22 @@
                             </tr>
                         </thead>
                         <tbody>
-                                <tr class="align-middle">
-                                    <th class="text-center">1</th>
-                                    <td class="text-center">ABC</td>
-                                    <td class="text-center">Sếp</td>
-                                    <td class="align-middle text-center">
-                                            <button class="btn btn-success">Hoạt Động</button>
-                                            <!-- <button class="btn btn-danger">Đã Khóa</button> -->
-                                    </td>
-                                    <td class="text-center">
-                                        <button class="btn btn-primary me-1" data-bs-toggle="modal"
-                                            data-bs-target="#capNhatKhachhangModal">Cập
-                                            Nhật</button>
-                                        <button class="btn btn-danger" data-bs-toggle="modal"
-                                            data-bs-target="#xoaKhachhangModal">Xóa</button>
-                                    </td>
-                                </tr>
+                            <tr class="align-middle">
+                                <th class="text-center">1</th>
+                                <td class="text-center">ABC</td>
+                                <td class="text-center">Sếp</td>
+                                <td class="align-middle text-center">
+                                    <button class="btn btn-success">Hoạt Động</button>
+                                    <!-- <button class="btn btn-danger">Đã Khóa</button> -->
+                                </td>
+                                <td class="text-center">
+                                    <button class="btn btn-primary me-1" data-bs-toggle="modal"
+                                        data-bs-target="#capNhatKhachhangModal">Cập
+                                        Nhật</button>
+                                    <button class="btn btn-danger" data-bs-toggle="modal"
+                                        data-bs-target="#xoaKhachhangModal">Xóa</button>
+                                </td>
+                            </tr>
                         </tbody>
                     </table>
                 </div>
@@ -68,10 +68,10 @@
                     </div>
                     <div class="col-md-12 mb-2">
                         <label class="mb-2">Tình Trạng</label>
-                     <select class="form-control mb-2">
-                        <option value="1">Hoạt Động</option>
-                        <option value="0">Tạm Ngưng</option>
-                    </select>
+                        <select class="form-control mb-2">
+                            <option value="1">Hoạt Động</option>
+                            <option value="0">Tạm Ngưng</option>
+                        </select>
                     </div>
                 </div>
                 <div class="modal-footer">
@@ -116,7 +116,7 @@
 <script>
 
 export default {
-   
+
 }
 </script>
 <style></style>

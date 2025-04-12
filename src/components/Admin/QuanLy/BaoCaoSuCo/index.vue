@@ -6,19 +6,20 @@
                     <h3>Báo Cáo Sự Cố</h3>
                 </div>
                 <div class="card-body">
-                    <label>Id</label>
-                    <input class="form-control mt-2" type="text">
-                    <label class="mt-2">Id Cư Dân Báo Cáo</label>
-                    <input class="form-control mt-2" type="text">
                     <label class="mt-2">Nội Dung Báo Cáo</label>
-                    <input class="form-control mt-2" type="text">
+                    <input class="form-control mt-2" type="text" />
+
                     <label class="mt-2">Trạng Thái Xử Lý</label>
-                    <input class="form-control mt-2" type="text">
+                    <select class="form-select mt-2">
+                        <option value="">-- Chọn trạng thái --</option>
+                        <option value="dang_xu_ly">Đang xử lý</option>
+                        <option value="da_xu_ly">Đã xử lý</option>
+                    </select>
+
                     <label class="mt-2">Ngày Tạo</label>
-                    <input class="form-control mt-2" type="date">
-                    <label class="mt-2">Tình Trạng</label>
-                    <input class="form-control mt-2" type="text">
+                    <input class="form-control mt-2" type="date" />
                 </div>
+
                 <div class="card-footer text-end mt-3">
                     <button class="btn btn-primary">Thêm Mới</button>
                 </div>
@@ -48,29 +49,23 @@
                                 </tr>
                                 <tr class=" text-center">
                                     <th class="align-middle text-center">#</th>
-                                    <th class="align-middle text-center">Id</th>
-                                    <th class="align-middle text-center">Id Dân Cư Báo Cáo</th>
+                                    <th class="align-middle text-center">Tên Cư Dân</th>
                                     <th class="align-middle text-center">Nội Dung Báo Cáo</th>
                                     <th class="align-middle text-center">Trạng Thái Xử Lý</th>
                                     <th class="align-middle text-center">Ngày Tạo</th>
-                                    <th class="align-middle text-center">Tình Trạng</th>
                                     <th class="align-middle text-center">Action</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <th class="align-middle text-center">1</th>
-                                    <th class="align-middle text-center">123</th>
-                                    <th class="align-middle text-center">123</th>
+                                    <th class="align-middle text-center">hehe</th>
                                     <th class="align-middle text-center">Nước Thấm Sàn</th>
                                     <th class="align-middle text-center">
                                         <button class="btn btn-warning">Đã Xử Lý</button>
                                     </th>
                                     <th class="align-middle text-center">12/02/2025</th>
-                                    <th class="align-middle text-center">
-                                        <button class="btn btn-success me-2">Hoạt Động</button>
-                                        <!-- <button class="btn btn-warning">Tạm Ngưng</button> -->
-                                    </th>
+                                
                                     <th class="align-middle text-center">
                                         <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal"
                                             data-bs-target="#exampleModal">
@@ -99,24 +94,16 @@
                 </div>
                 <div class="modal-body">
                     <div>
-                        <label class="mb-2 mt-2">Id</label>
-                        <input class="form-control" type="text">
-                        <label class="mb-2 mt-2">Id Cư Dân Báo Cáo</label>
-                        <input class="form-control" type="text">
                         <label class="mb-2 mt-2">Nội Dung Báo Cáo</label>
                         <input class="form-control" type="text">
                         <label class="mb-2 mt-2">Trạng Thái Xử Lý</label>
                         <select class="form-control">
-                            <option value="1">Đã Xử Lý</option>
-                            <option value="0">Chưa Xử Lý</option>
+                            <option value="1">Đang Xử Lý</option>
+                            <option value="0">Đã Xử Lý</option>
                         </select>
                         <label class="mb-2 mt-2">Ngày Tạo</label>
                         <input class="form-control" type="date">
-                        <label class="mb-2 mt-2">Tình Trạng</label>
-                        <select class="form-control">
-                            <option value="1">Hoạt Động</option>
-                            <option value="0">Tạm Ngưng</option>
-                        </select>
+                        
                     </div>
                 </div>
                 <div class="modal-footer">

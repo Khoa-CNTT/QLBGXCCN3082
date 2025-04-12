@@ -31,14 +31,11 @@ export default {
                     title: "Trang Chủ",
                     icon: "fa fa-user",
                 },
+
                 {
-                    title: "Quản Lý Cư Dân",
+                    title: "Quản Lý Admin",
                     icon: "fa fa-chart-area",
                     child: [
-                        {
-                            title: "Cư Dân",
-                            href: "/admin/cu-dan",
-                        },
                         {
                             title: "Chức Năng",
                             href: "/admin/chuc-nang",
@@ -55,14 +52,87 @@ export default {
                             title: "Chi Tiết Chức Vụ",
                             href: "/admin/chi-tiet-chuc-vu",
                         },
+
+                    ],
+                },
+
+                {
+                    title: "Quản Lý Cư Dân",
+                    icon: "fa fa-chart-area",
+                    child: [
+                        {
+                            title: "Cư Dân",
+                            href: "/admin/cu-dan",
+                        },
+
+
+                        {
+                            title: "Căn Hộ",
+                            href: "/admin/can-ho",
+                        },
+
+
+                        {
+                            title: "Lịch Sử Ra Vào",
+                            href: "/admin/lich-su-ra-vao",
+                        },
+                        {
+                            title: "Quản lý thông báo",
+                            href: "/admin/thong-bao",
+                        },
+                        {
+                            title: "Giao Dịch",
+                            href: "/admin/giao-dich",
+                        },
+
+                    ],
+                },
+
+                {
+                    title: "Quản Lý Bãi Xe",
+                    icon: "fa fa-chart-area",
+                    child: [
+                        {
+                            title: "Chi Tiết Bãi Xe",
+                            href: "/admin/chi-tiet-bai-xe",
+                        },
+                        {
+                            title: "Bãi Xe",
+                            href: "/admin/bai-xe",
+                        },
+                        {
+                            title: "Vị Trí Camera",
+                            href: "/admin/vi-tri-cam",
+                        },
+
+                        {
+                            title: "Camera",
+                            href: "/admin/camera",
+                        },
+
+                    ],
+                },
+
+                {
+                    title: "Quản Lý Xe",
+                    icon: "fa fa-chart-area",
+                    child: [
                         {
                             title: "Xe",
                             href: "/admin/xe",
                         },
                         {
-                            title: "Căn Hộ",
-                            href: "/admin/can-ho",
+                            title: "Loại Xe",
+                            href: "/admin/loai-xe",
                         },
+
+                    ],
+                },
+
+                {
+                    title: "Quản Lý Sự Cố",
+                    icon: "fa fa-chart-area",
+                    child: [
                         {
                             title: "Báo Cáo Sự Cố",
                             href: "/admin/bao-cao-su-co",
@@ -70,14 +140,6 @@ export default {
                         {
                             title: "Báo Cáo Khách Vãng Lai",
                             href: "/admin/bao-cao-khach-vang-lai",
-                        },
-                        {
-                            title: "Camera",
-                            href: "/admin/camera",
-                        },
-                        {
-                            title: "Lịch Sử Ra Vào",
-                            href: "/admin/lich-su-ra-vao",
                         },
 
                     ],
