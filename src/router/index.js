@@ -11,12 +11,12 @@ const routes = [
     {
         path : '/admin/dang-nhap',
         component: ()=>import('../components/Admin/DangNhap/index.vue'),
-        meta    :   {layout : 'client'}
+        meta    :   {layout : 'auth'}
     },
     {
         path : '/admin/dang-ky',
         component: ()=>import('../components/Admin/DangKy/index.vue'),
-        meta    :   {layout : 'client'}
+        meta    :   {layout : 'auth'}
     },
     {
         path : '/admin/xe',
@@ -117,12 +117,12 @@ const routes = [
     {
         path : '/cu-dan/dang-ky',
         component: ()=>import('../components/CuDan/DangKy/index.vue'),
-        meta    :   {layout : 'client'}
+        meta    :   {layout : 'auth'}
     },
     {
         path : '/cu-dan/dang-nhap',
-        component: ()=>import('../components/CuDan/DangKy/index.vue'),
-        meta    :   {layout : 'client'}
+        component: ()=>import('../components/CuDan/DangNhap/index.vue'),
+        meta    :   {layout : 'auth'}
     },
     {
         path : '/cu-dan/quan-ly-xe',
