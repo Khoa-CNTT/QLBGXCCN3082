@@ -53,7 +53,7 @@
                             <h6 class="text-center mb-3">DANH SÁCH CƯ DÂN</h6>
                             <div class="card-body">
                                 <div class="input-group mb-3">
-                                    <input type="text" class="form-control" placeholder="Nguyen Van A"
+                                    <input type="text" class="form-control" placeholder="Họ và tên, số điện thoại"
                                         aria-label="Recipient's username" aria-describedby="basic-addon2">
                                     <span class="input-group-text" id="basic-addon2">Tìm Kiếm</span>
                                 </div>
@@ -140,7 +140,6 @@ export default {};
     padding: 10px;
 }
 
-/* Căn chỉnh lề hợp lý hơn */
 .border {
     background-color: #f8f9fa;
 }

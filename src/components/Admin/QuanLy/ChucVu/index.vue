@@ -72,8 +72,6 @@
                 </div>
                 <div class="modal-body">
                     <div class="card-body">
-                    <label class="mb-2">ID</label>
-                    <input type="text" class="form-control mb-2" />
                     <label class="mb-2">Tên Chức Vụ</label>
                     <input type="text" class="form-control mb-2" />
                     <label class="mb-2">Tình Trạng</label>

@@ -30,8 +30,8 @@
                         <tbody>
                                 <tr class="align-middle">
                                     <th class="text-center"></th>
-                                    <td></td>
-                                    <td></td>
+                                    <td class="text-center"></td>
+                                    <td class="text-center"></td>
                                     <td class="text-center"></td>
                                     <td class="text-center"></td>
                                     <td class="align-middle text-center">
