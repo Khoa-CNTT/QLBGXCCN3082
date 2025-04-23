@@ -10,8 +10,8 @@
                     <input class="form-control mt-2" type="text" />
                     <label class="mt-2">Số Điện Thoại</label>
                     <input class="form-control mt-2" type="text" />
-                    <label  class="form-label mt-2">Loại Xe</label>
-                    <select  class="form-select">
+                    <label class="form-label mt-2">Loại Xe</label>
+                    <select class="form-select">
                         <option value="">-- Chọn loại xe --</option>
                         <option value="oto">Ô tô</option>
                         <option value="xemay">Xe máy</option>
@@ -43,11 +43,11 @@
                         <button class="btn btn-outline-secondary" type="button">Tìm
                             Kiếm</button>
                     </div>
+                    <div class="table-responsive">
                     <table class="table table-bordered mb-0">
                         <thead>
                             <tr class="text-center align-middle">
                                 <th class="text-center align-middle">#</th>
-
                                 <th class="text-center align-middle">Họ Và Tên</th>
                                 <th class="text-center align-middle">Số Điện Thoại</th>
                                 <th class="text-center align-middle">Thời Gian Vào</th>
@@ -66,10 +66,10 @@
                                 <th class="text-center align-middle">7h00 11/2/2025</th>
                                 <th class="text-center align-middle">Xe Máy</th>
                                 <th class="align-middle text-center">
-                                    <button class="btn btn-warning">Chưa Thanh Toán</button>
-                                    <!-- <button class="btn btn-primary">Đã Thanh Tóan</button> -->
+                                    <button class="btn btn-warning me-2">Chưa Thanh Toán</button>
+                                    <button class="btn btn-primary">Đã Thanh Tóan</button>
                                 </th>
-                                <th class="text-center align-middle">
+                                <th class="align-middle text-center">
                                     <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal"
                                         data-bs-target="#exampleModal">
                                         Sửa
@@ -82,6 +82,7 @@
                             </tr>
                         </tbody>
                     </table>
+                </div>
                 </div>
             </div>
         </div>
