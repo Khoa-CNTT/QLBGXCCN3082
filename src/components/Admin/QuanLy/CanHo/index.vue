@@ -79,6 +79,26 @@
                                         </button>
                                     </th>
                                 </tr>
+                                <tr>
+                                    <th class="align-middle text-center">1</th>
+                                    <th class="align-middle text-center">Tầng 2</th>
+                                    <th class="align-middle text-center">201</th>
+                                    <th class="align-middle text-center">Nguyễn Văn A</th>
+                                    <th class="align-middle text-center">
+                                        <button class="btn btn-success me-2">Hoạt Động</button>
+                                        <button class="btn btn-warning">Tạm Ngưng</button>
+                                    </th>
+                                    <th class="align-middle text-center">
+                                        <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal">
+                                            Sửa
+                                        </button>
+                                        <button type="button" class="btn btn-danger" data-bs-toggle="modal"
+                                            data-bs-target="#exampleModal1">
+                                            Xóa
+                                        </button>
+                                    </th>
+                                </tr>
                             </tbody>
                         </table>
                     </div>
