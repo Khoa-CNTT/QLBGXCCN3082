@@ -45,8 +45,7 @@
                                                 placeholder="Search...">
                                             <span class="position-absolute top-50 search-show translate-middle-y"
                                                 style="left: 15px;"><i class="bx bx-search"></i></span>
-                                            <button class="btn btn-outline-secondary" type="button">Tìm
-                                                Kiếm</button>
+                                            <button class="btn btn-outline-secondary" type="button">Tìm Kiếm</button>
                                         </div>
                                     </th>
                                 </tr>
@@ -67,7 +66,7 @@
                                     <th class="align-middle text-center">Nguyễn Văn A</th>
                                     <th class="align-middle text-center">
                                         <button class="btn btn-success me-2">Hoạt Động</button>
-                                        <!-- <button class="btn btn-warning">Tạm Ngưng</button> -->
+                                        <button class="btn btn-warning">Tạm Ngưng</button>
                                     </th>
                                     <th class="align-middle text-center">
                                         <button type="button" class="btn btn-primary me-2" data-bs-toggle="modal"
