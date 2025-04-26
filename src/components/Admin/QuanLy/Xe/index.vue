@@ -28,7 +28,7 @@
 
                         <tr class="align-middle">
                             <th class="text-center">1</th>
-                            <td class="text-center">datbui</td>
+                            <td class="text-center">hieu pham</td>
                             <td class="text-center">123.45</td>
                             <td class="text-center">vision</td>
                             <td class="align-middle text-center">
