@@ -20,7 +20,7 @@ const routes = [
     },
     {
         path : '/admin/xe',
-        component: ()=>import('../components/Admin/QuanLy/Xe/index.vue'),
+        component: ()=>import('../componets/Admin/QuanLy/Xe/index.vue'),
         meta    :   {layout : 'default'}
     },
     {
