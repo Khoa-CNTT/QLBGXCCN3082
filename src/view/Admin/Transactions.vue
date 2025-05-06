@@ -14,6 +14,7 @@
           </div>
           <button class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 flex items-center">
             <Plus class="mr-2 h-4 w-4" />
+            
             Thêm giao dịch
           </button>
         </div>
