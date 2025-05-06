@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "ant-design-vue": "^4.2.6",
+    "apexcharts": "^4.7.0",
     "axios": "^1.8.4",
     "chart.js": "^4.4.9",
     "lucide-vue-next": "^0.294.0",

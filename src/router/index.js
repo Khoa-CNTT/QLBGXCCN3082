@@ -32,6 +32,11 @@ const routes = [
                 component: () => import("../view/Admin/Cameras.vue"),
                 beforeEnter: checkLoginAdmin,
             },
+            {
+                path: "admin/quan-ly-khach-vang-lai",
+                component: () => import("../view/User/KhachVangLai.vue"),
+                beforeEnter: checkLoginAdmin,
+              },
         ]
     },
 
