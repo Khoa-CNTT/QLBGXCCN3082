@@ -66,13 +66,18 @@ const routes = [
                 name: "Residents",
                 component: () => import("../view/Admin/Residents.vue"),
                 beforeEnter: checkLoginAdmin,
-              },
-              {
+            },
+            {
                 path: "admin/quan-ly-bao-cao",
                 name: "Reports",
                 component: () => import("../view/Admin/Reports.vue"),
                 beforeEnter: checkLoginAdmin,
-              },
+            },
+            {
+                path: "admin/phan-quyen",
+                component: () => import("../view/Admin/PhanQuyen.vue"),
+                beforeEnter: checkLoginAdmin,
+            },
         ]
     },
 
