@@ -48,13 +48,19 @@ const routes = [
                 name: "Vehicles",
                 component: () => import("../view/Admin/Vehicles.vue"),
                 beforeEnter: checkLoginAdmin,
-              },
-              {
+            },
+            {
                 path: "admin/quan-ly-giao-dich",
                 name: "Transactions",
                 component: () => import("../view/Admin/Transactions.vue"),
                 beforeEnter: checkLoginAdmin,
-              },
+            },
+            {
+                path: "admin/quan-li-bai-giu-xe",
+                name: "ParkingManagement",
+                component: () => import("../view/Admin/ParkingManagement.vue"),
+                beforeEnter: checkLoginAdmin,
+            },
         ]
     },
 
