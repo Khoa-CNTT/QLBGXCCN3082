@@ -36,6 +36,18 @@ const routes = [
                 path: "admin/quan-ly-khach-vang-lai",
                 component: () => import("../view/User/KhachVangLai.vue"),
                 beforeEnter: checkLoginAdmin,
+            },
+            {
+                path: "admin/quan-ly-xe/them-xe",
+                name: "AddVehicle",
+                component: () => import("../view/Admin/AddVehicle.vue"),
+                beforeEnter: checkLoginAdmin,
+            },
+            {
+                path: "admin/quan-ly-xe",
+                name: "Vehicles",
+                component: () => import("../view/Admin/Vehicles.vue"),
+                beforeEnter: checkLoginAdmin,
               },
         ]
     },
@@ -43,7 +55,7 @@ const routes = [
     {
         path: "/dang-nhap",
         component: () => import("../view/Admin/Login.vue"),
-      },
+    },
 ]
 
 const router = createRouter({
