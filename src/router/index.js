@@ -68,6 +68,13 @@ const routes = [
         path: "/dang-nhap",
         component: () => import("../view/Admin/Login.vue"),
     },
+
+    {
+        path: "/user/login",
+        component: () => import("../view/User/Login.vue"),
+    },
+
+
 ]
 
 const router = createRouter({
