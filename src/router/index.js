@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from "vue-router"; // cài vue-router: npm install vue-router@next --save
 import checkLoginAdmin from "./checkLoginAdmin.js";
+import checkLoginUser from "./checkLoginUser.js";
 const routes = [
     {
         path: "/",
@@ -80,6 +81,50 @@ const routes = [
             },
         ]
     },
+
+    {
+        path: "/user",
+        component: () => import("../layouts/wrapper/clientLayout.vue"),
+        redirect: "/user/profile",
+        children: [
+          {
+            path: "profile",
+            component: () => import("../view/User/Profile.vue"),
+            beforeEnter: checkLoginUser,
+          },
+        //   {
+        //     path: "bao-cao",
+        //     component: () => import("../views/User/Reports.vue"),
+        //     beforeEnter: checkLoginUser,
+        //   },
+        //   {
+        //     path: "lich-su",
+        //     component: () => import("../views/User/History.vue"),
+        //     beforeEnter: checkLoginUser,
+        //   },
+        //   {
+        //     path: "thanh-toan",
+        //     component: () => import("../views/User/Transaction.vue"),
+        //     beforeEnter: checkLoginUser,
+        //   },
+        //   {
+        //     path: "quan-ly-xe",
+        //     component: () => import("../views/User/MyVehicles.vue"),
+        //     beforeEnter: checkLoginUser,
+        //   },
+        //   {
+        //     path: "quan-ly-cho-xe",
+        //     component: () => import("../views/User/ParkingManger.vue"),
+        //     beforeEnter: checkLoginUser,
+        //   },
+        //   {
+        //     path: "thanh-toan-online",
+        //     component: () => import("../views/User/ThanhToanOnl.vue"),
+        //     // beforeEnter: checkLoginUser,
+        //   },
+          
+        ],
+      },
 
     {
         path: "/dang-nhap",
