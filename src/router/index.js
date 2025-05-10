@@ -69,6 +69,12 @@ const routes = [
                 beforeEnter: checkLoginAdmin,
             },
             {
+                path: "admin/quan-ly-khach-hang/them-khach-hang",
+                name: "AddResident",
+                component: () => import("../view/Admin/AddResident.vue"),
+                beforeEnter: checkLoginAdmin,
+            },
+            {
                 path: "admin/quan-ly-bao-cao",
                 name: "Reports",
                 component: () => import("../view/Admin/Reports.vue"),
@@ -79,6 +85,24 @@ const routes = [
                 component: () => import("../view/Admin/PhanQuyen.vue"),
                 beforeEnter: checkLoginAdmin,
             },
+            {
+                path: "admin/quan-ly-cai-dat",
+                name: "Settings",
+                component: () => import("../view/Admin/Settings.vue"),
+                beforeEnter: checkLoginAdmin,
+            },
+            {
+                path: "admin/profile",
+                name: "Profile",
+                component: () => import("../view/Admin/Profile.vue"),
+                beforeEnter: checkLoginAdmin,
+            },
+            {
+                path: "admin/quan-ly-camera/them-camera",
+                name: "AddCamera",
+                component: () => import("../view/Admin/AddCamera.vue"),
+                beforeEnter: checkLoginAdmin,
+            },
         ]
     },
 
@@ -87,44 +111,44 @@ const routes = [
         component: () => import("../layouts/wrapper/clientLayout.vue"),
         redirect: "/user/profile",
         children: [
-          {
-            path: "profile",
-            component: () => import("../view/User/Profile.vue"),
-            beforeEnter: checkLoginUser,
-          },
-           {
-             path: "bao-cao",
-             component: () => import("../view/User/Reports.vue"),
-             beforeEnter: checkLoginUser,
-           },
-          {
-            path: "lich-su",
-            component: () => import("../view/User/History.vue"),
-            beforeEnter: checkLoginUser,
-          },
-          {
-            path: "thanh-toan",
-            component: () => import("../view/User/Transaction.vue"),
-            beforeEnter: checkLoginUser,
-          },
-          {
-            path: "quan-ly-xe",
-            component: () => import("../view/User/MyVehicles.vue"),
-            beforeEnter: checkLoginUser,
-          },
-          {
-            path: "quan-ly-cho-xe",
-            component: () => import("../view/User/ParkingManger.vue"),
-            beforeEnter: checkLoginUser,
-          },
-          {
-            path: "thanh-toan-online",
-            component: () => import("../view/User/ThanhToanOnl.vue"),
-            // beforeEnter: checkLoginUser,
-          },
-          
+            {
+                path: "profile",
+                component: () => import("../view/User/Profile.vue"),
+                beforeEnter: checkLoginUser,
+            },
+            {
+                path: "bao-cao",
+                component: () => import("../view/User/Reports.vue"),
+                beforeEnter: checkLoginUser,
+            },
+            {
+                path: "lich-su",
+                component: () => import("../view/User/History.vue"),
+                beforeEnter: checkLoginUser,
+            },
+            {
+                path: "thanh-toan",
+                component: () => import("../view/User/Transaction.vue"),
+                beforeEnter: checkLoginUser,
+            },
+            {
+                path: "quan-ly-xe",
+                component: () => import("../view/User/MyVehicles.vue"),
+                beforeEnter: checkLoginUser,
+            },
+            {
+                path: "quan-ly-cho-xe",
+                component: () => import("../view/User/ParkingManger.vue"),
+                beforeEnter: checkLoginUser,
+            },
+            {
+                path: "thanh-toan-online",
+                component: () => import("../view/User/ThanhToanOnl.vue"),
+                // beforeEnter: checkLoginUser,
+            },
+
         ],
-      },
+    },
 
     {
         path: "/dang-nhap",
@@ -136,7 +160,10 @@ const routes = [
         component: () => import("../view/User/Login.vue"),
     },
 
-
+    {
+        path: "/user/register",
+        component: () => import("../view/User/Register.vue"),
+    },
 ]
 
 const router = createRouter({
