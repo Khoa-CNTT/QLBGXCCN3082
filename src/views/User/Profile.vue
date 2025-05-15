@@ -25,21 +25,41 @@
             </div>
             <h2 class="mt-4 text-xl font-bold">{{ userProfile.fullName }}</h2>
             <p class="text-sm text-gray-500">{{ userProfile.email }}</p>
-            <div class="mt-2 px-3 py-1 bg-green-100 text-green-800 dark:bg-green-900 dark:text-green-300 text-xs rounded-full">
-              {{ getStatusText(userProfile.status) }}
-            </div>
-            <div class="mt-4 w-full border-t border-gray-200 dark:border-gray-700 pt-4">
-              <div class="flex items-center justify-between mb-2">
-                <span class="text-sm text-gray-500">Mã cư dân</span>
-                <span class="font-medium">{{ userProfile.residentId }}</span>
+            
+            <div class="mt-2 space-y-1">
+              <div class="px-3 py-1 text-xs rounded-full"
+                   :class="userProfile.approved === 1 ? 'bg-green-100 text-green-800' : 'bg-yellow-100 text-yellow-800'">
+                {{ getApprovalText(userProfile.approved) }}
               </div>
+              <div class="px-3 py-1 text-xs rounded-full"
+                   :class="userProfile.status === 1 ? 'bg-blue-100 text-blue-800' : 'bg-red-100 text-red-800'">
+                {{ getStatusText(userProfile.status) }}
+              </div>
+            </div>
+            
+            <div class="mt-4 w-full border-t border-gray-200 dark:border-gray-700 pt-4">
               <div class="flex items-center justify-between mb-2">
                 <span class="text-sm text-gray-500">Căn hộ</span>
                 <span class="font-medium">{{ userProfile.apartment }}</span>
               </div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-sm text-gray-500">Số dư</span>
+                <span class="font-medium">{{ formatCurrency(userProfile.balance) }}</span>
+              </div>
+              <div class="flex items-center justify-between mb-2">
+                <span class="text-sm text-gray-500">Biển số xe</span>
+                <span class="font-medium">{{ userProfile.vehiclePlate || 'Chưa đăng ký xe' }}</span>
+              </div>
               <div class="flex items-center justify-between">
-                <span class="text-sm text-gray-500">Ngày đăng ký</span>
-                <span class="font-medium">{{ userProfile.registrationDate }}</span>
+                <span class="text-sm text-gray-500">Loại xe</span>
+                <span class="font-medium">{{ userProfile.vehicleType || 'Chưa đăng ký xe' }}</span>
+              </div>
+              <div v-if="!isExpired" class="mt-3 flex justify-center">
+                <router-link class="w-1/2" to="/user/thanh-toan-online">
+                  <button  class="w-full px-3 py-1.5 bg-blue-600 text-white rounded-md hover:bg-blue-700 text-sm">
+                    Nạp tiền
+                  </button>
+                </router-link>
               </div>
             </div>
           </div>
@@ -246,7 +266,6 @@
   </template>
   
   <script>
-  import { ref, reactive, computed } from 'vue'
   import { 
     User, 
     Edit, 
@@ -258,7 +277,7 @@
     Key, 
     AlertTriangle 
   } from 'lucide-vue-next'
-  
+  import baseRequestUser from '../../core/baseRequestUser'
   export default {
     name: 'ResidentProfile',
     components: {
@@ -272,140 +291,125 @@
       Key,
       AlertTriangle
     },
-    setup() {
-      const isEditing = ref(false)
-      
-      // User profile data
-      const userProfile = ref({
-        residentId: 'RES-001',
-        fullName: 'Nguyễn Văn A',
-        email: 'nguyenvana@example.com',
-        phone: '0912345678',
-        idNumber: '012345678901',
-        address: 'Số 123, Đường ABC, Quận XYZ, Hà Nội',
-        apartment: 'A1201',
-        registrationDate: '15/01/2023',
-        status: 'approved',
-        avatar: null,
-        registeredVehicles: 2,
-        residentType: 'Chủ hộ'
-      })
-      
-      // Edited profile data
-      const editedProfile = ref({...userProfile.value})
-      
-      // Password change data
-      const passwordChange = ref({
-        current: '',
-        new: '',
-        confirm: ''
-      })
-      
-      // Show password toggles
-      const showPassword = reactive({
-        current: false,
-        new: false,
-        confirm: false
-      })
-      
-      // Account activities
-      const accountActivities = ref([
-        {
-          title: 'Đăng nhập thành công',
-          time: '24/04/2023 - 10:25',
-          icon: LogIn,
-          iconBg: 'bg-green-100',
-          iconColor: 'text-green-600'
+    data() {
+      return {
+        isEditing: false,
+        userProfile: {
+          residentId: 'RES-001',
+          fullName: 'Nguyễn Văn A',
+          email: 'nguyenvana@example.com',
+          phone: '0912345678',
+          idNumber: '012345678901',
+          address: 'Số 123, Đường ABC, Quận XYZ, Hà Nội',
+          apartment: 'A1201',
+          registrationDate: '15/01/2023',
+          status: 'approved',
+          avatar: null,
+          registeredVehicles: 2,
+          residentType: 'Chủ hộ',
+          ngay_het_han: null
         },
-        {
-          title: 'Thay đổi mật khẩu',
-          time: '20/04/2023 - 15:30',
-          icon: Key,
-          iconBg: 'bg-blue-100',
-          iconColor: 'text-blue-600'
-        },
-        {
-          title: 'Cập nhật thông tin cá nhân',
-          time: '15/04/2023 - 09:45',
-          icon: Settings,
-          iconBg: 'bg-purple-100',
-          iconColor: 'text-purple-600'
-        },
-        {
-          title: 'Đăng nhập thất bại',
-          time: '10/04/2023 - 18:20',
-          icon: AlertTriangle,
-          iconBg: 'bg-red-100',
-          iconColor: 'text-red-600'
-        },
-        {
-          title: 'Đăng nhập thành công',
-          time: '10/04/2023 - 18:25',
-          icon: LogIn,
-          iconBg: 'bg-green-100',
-          iconColor: 'text-green-600'
-        }
-      ])
-      
-      // Get status text
-      function getStatusText(status) {
-        switch (status) {
-          case 'pending':
-            return 'Chờ phê duyệt'
-          case 'approved':
-            return 'Đã phê duyệt'
-          case 'rejected':
-            return 'Bị từ chối'
-          default:
-            return status
-        }
-      }
-      
-      // Toggle password visibility
-      function togglePasswordVisibility(field) {
-        showPassword[field] = !showPassword[field]
-      }
-      
-      // Cancel edit
-      function cancelEdit() {
-        editedProfile.value = {...userProfile.value}
-        passwordChange.value = {
+        editedProfile: {},
+        passwordChange: {
           current: '',
           new: '',
           confirm: ''
-        }
-        isEditing.value = false
+        },
+        showPassword: {
+          current: false,
+          new: false,
+          confirm: false
+        },
+        accountActivities: []
       }
-      
-      // Save profile
-      function saveProfile() {
-        // In a real app, you would send the data to the server here
-        // For demo purposes, we'll just update the local data
-        userProfile.value = {...editedProfile.value}
-        
-        // Handle password change if provided
-        if (passwordChange.value.current && 
-            passwordChange.value.new && 
-            passwordChange.value.confirm && 
-            passwordChange.value.new === passwordChange.value.confirm) {
+    },
+    computed: {
+      isExpired() {
+        if (!this.userProfile.ngay_het_han || this.userProfile.ngay_het_han === null) return false;
+        const expiryDate = new Date(this.userProfile.ngay_het_han);
+        const now = new Date();
+        return expiryDate < now;
+      }
+    },
+    mounted() {
+      this.editedProfile = { ...this.userProfile }
+      this.getUserProfile()
+    },
+    methods: {
+      getStatusText(status) {
+        if (status === 1) return 'Hoạt động'
+        if (status === 0) return 'Tạm khóa'
+        return 'Không xác định'
+      },
+      getApprovalText(approved) {
+        if (approved === 1) return 'Đã phê duyệt'
+        if (approved === 0) return 'Chờ phê duyệt'
+        return 'Không xác định'
+      },
+      async getUserProfile() {
+        const res = await baseRequestUser.get('user/profile')
+        const data = res.data.data
+        this.userProfile = {
+          fullName: data.ho_va_ten || '',
+          email: data.email || '',
+          phone: data.so_dien_thoai || '',
+          idNumber: data.so_cccd || '',
+          address: `${data.ten_toa_nha || ''} - Căn ${data.so_can_ho || ''}`,
+          apartment: `${data.ten_toa_nha || ''} - Căn ${data.so_can_ho || ''}`,
+          balance: data.so_du ?? 0,
+          status: data.trang_thai,
+          approved: data.phe_duyet,
+          avatar: null,
+          registeredVehicles: data.bien_so_xe ? 1 : 0,
+          residentType: data.ten_loai_xe || 'Chưa xác định',
+          vehiclePlate: data.bien_so_xe || '',
+          vehicleType: data.ten_loai_xe || '',
+          registrationDate: data.created_at ? new Date(data.created_at).toLocaleDateString('vi-VN') : '',
+          ngay_het_han: data.ngay_het_han || null
+        }
+        this.editedProfile = { ...this.userProfile }
+
+        // Map lịch sử đăng nhập
+        if (res.data.lich_su_login && Array.isArray(res.data.lich_su_login)) {
+          this.accountActivities = res.data.lich_su_login.map(item => ({
+            title: 'Đăng nhập thành công',
+            time: item.created_at ? new Date(item.created_at).toLocaleString('vi-VN') : '',
+            icon: this.$options.components.LogIn,
+            iconBg: 'bg-green-100',
+            iconColor: 'text-green-600'
+          }))
+        } else {
+          this.accountActivities = []
+        }
+      },
+      togglePasswordVisibility(field) {
+        this.showPassword[field] = !this.showPassword[field]
+      },
+      cancelEdit() {
+        this.editedProfile = { ...this.userProfile }
+        this.passwordChange = { current: '', new: '', confirm: '' }
+        this.isEditing = false
+      },
+      saveProfile() {
+        this.userProfile = { ...this.editedProfile }
+        // Password change logic (if needed)
+        if (
+          this.passwordChange.current &&
+          this.passwordChange.new &&
+          this.passwordChange.confirm &&
+          this.passwordChange.new === this.passwordChange.confirm
+        ) {
           // Password change logic would go here
-          console.log('Password changed')
+          // For demo: just clear fields
+          this.passwordChange = { current: '', new: '', confirm: '' }
         }
-        
-        isEditing.value = false
-      }
-      
-      return {
-        isEditing,
-        userProfile,
-        editedProfile,
-        passwordChange,
-        showPassword,
-        accountActivities,
-        getStatusText,
-        togglePasswordVisibility,
-        cancelEdit,
-        saveProfile
+        this.isEditing = false
+      },
+      formatCurrency(amount) {
+        return new Intl.NumberFormat('vi-VN', {
+          style: 'currency',
+          currency: 'VND'
+        }).format(amount)
       }
     }
   }
